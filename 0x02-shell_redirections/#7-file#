@@ -1,2 +1,2 @@
 #!/bin/bash
-sed -i -r "\*\\'"Holberton School"\'\\*$\?\*\
+sed -i -r 
