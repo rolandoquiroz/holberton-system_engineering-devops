@@ -34,7 +34,38 @@ Requirements:
 
 ### URL here:
 
- - https://docs.google.com/document/d/1S4ehK4PDyNKRjDVQZMiuVwEwJXnEBI1DAA6Sh-JP5h8/edit?usp=sharing
+ - 
+ https://docs.google.com/document/d/1WJvLAwdv8ykSTmN_Zf5CcoXjNDuIl_u3jcx8xG2Ky-s/edit?usp=sharing
+
+### 1. Distributed web infrastructure 
+
+On a whiteboard, design a three server web infrastructure that hosts the website www.foobar.com.
+
+Requirements:
+
+    You must add:
+        2 servers
+        1 web server (Nginx)
+        1 application server
+        1 load-balancer (HAproxy)
+        1 set of application files (your code base)
+        1 database (MySQL)
+
+    You must be able to explain some specifics about this infrastructure:
+        For every additional element, why you are adding it
+        What distribution algorithm your load balancer is configured with and how it works
+        Is your load-balancer enabling an Active-Active or Active-Passive setup, explain the difference between both
+        How a database Primary-Replica (Master-Slave) cluster works
+        What is the difference between the Primary node and the Replica node in regard to the application
+
+    You must be able to explain what the issues are with this infrastructure:
+        Where are SPOF
+        Security issues (no firewall, no HTTPS)
+        No monitoring
+
+### URL here:
+
+-  https://docs.google.com/document/d/1S4ehK4PDyNKRjDVQZMiuVwEwJXnEBI1DAA6Sh-JP5h8/edit?usp=sharing
 
 ### 2. Secured and monitored web infrastructure 
 
@@ -62,8 +93,32 @@ Requirements:
 
 ### URL here:
 
- - https://docs.google.com/document/d/1lUM7UgBjLiSg6lJdbl4oFoD5Qpq0dhjKGc7kJHOChCY/edit?usp=sharing
+ - 
+https://docs.google.com/document/d/1S4ehK4PDyNKRjDVQZMiuVwEwJXnEBI1DAA6Sh-JP5h8/edit?usp=sharing
 
+### 3. Scale up 
+
+
+Application server vs web server
+
+Requirements:
+
+    You must add:
+        1 server
+        1 load-balancer (HAproxy) configured as cluster with the other one
+        Split components (web server, application server, database) with their own server
+
+    You must be able to explain some specifics about this infrastructure:
+        For every additional element, why you are adding it
+
+### URL here:
+
+- 
+ https://docs.google.com/document/d/1nkLueXmAp08RrfpcYz1uJY0w_zMwCkQs-Eg92KZ7q2o/edit?usp=sharing
+
+## Author
+
+Rolando Quiroz email: 906@holbertonschool.com
 
 
 ## License
