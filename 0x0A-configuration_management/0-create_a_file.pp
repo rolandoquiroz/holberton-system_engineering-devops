@@ -1,7 +1,8 @@
 # Using Puppet, install puppet-lint.
 file { '/tmp/holberton':
-      owner   => 'www-data',
+      ensure  => 'file'
+      content => 'I love Puppet',
       group   => 'www-data',
+      owner   => 'www-data',
       mode    => '0744',
-      content => 'I love Puppet'
 }
