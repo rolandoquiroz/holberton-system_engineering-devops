@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # Configure your Nginx server to redirect to another page.
 apt-get -y install nginx
-sed -ie "s/^server {$/server {\n\trewrite ^\/redirect_me https:\/\/www.youtube.com/watch?v=wupToqz1e2g permanent;/g" /etc/nginx/sites-available/default
+sed -ie "s/^server {$/server {\n\trewrite ^\/redirect_me https:\/\/www.youtube.com\/watch?v=wupToqz1e2g permanent;/g" /etc/nginx/sites-available/default
 service nginx restart
