@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # Find out what’s keeping your Ubuntu container’s Nginx installation from listening on port 80
 sudo service nginx stop
-tar cf - /etc/nginx/sites-available/default | (cd /etc/nginx/sites-enebled/default;tar xf -)
+tar cf - /etc/nginx/sites-available/ | (cd /etc/nginx/sites-enebled/;tar xf -)
 sudo service nginx start
