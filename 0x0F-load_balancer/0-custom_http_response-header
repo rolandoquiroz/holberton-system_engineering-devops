@@ -1,4 +1,4 @@
-#!/usr/bin/env bashx
+#!/usr/bin/env bash
 # This script says which server is working
 sudo apt-get -y update && sudo apt-get -y install nginx
 ufw allow 'Nginx HTTP'
