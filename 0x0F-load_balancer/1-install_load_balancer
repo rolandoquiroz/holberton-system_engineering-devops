@@ -9,4 +9,4 @@ echo "frontend http
         bind *:80\
         mode http
         default_backend web-backend" | sudo tee /etc/haproxy/haproxy.cfg
-sudo service HAproxy restart
+sudo service haproxy restart
