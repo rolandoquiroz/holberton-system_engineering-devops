@@ -1,6 +1,7 @@
-#!/usr/bin/env bash
+#!/usr/bin/env bashx
 # This script says which server is working
 sudo apt-get -y update && sudo apt-get -y install nginx
+ufw allow 'Nginx HTTP'
 echo "Holberton School" | sudo tee /var/www/html/index.html
 sudo sed -ie "s/^server {$/server {\n\trewrite ^\/redirect_me https:\/\/www.youtube.com\/watch?v=wupToqz1e2g permanent;/g" /etc/nginx/sites-available/default
 echo "Ceci n'est pas une page" | sudo tee /var/www/html/my_404.html
