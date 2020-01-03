@@ -2,4 +2,4 @@
 # Find out what’s keeping your Ubuntu container’s Nginx installation from listening on port 80
 ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 sudo service nginx restart
-kill -9 nginx
+pkill -o nginx
