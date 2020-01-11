@@ -34,14 +34,14 @@ optiondontlognull
 	errorfile 503 /etc/haproxy/errors/503.http
 	errorfile 504 /etc/haproxy/errors/504.http
 backend web-backend
-balance roundrobin
-server 906-web-01 104.196.104.147:80 check
-server 906-web-02 34.73.38.83:80 check
+	balance roundrobin
+	server 906-web-01 104.196.104.147:80 check
+	server 906-web-02 34.73.38.83:80 check
 frontend www-http
-bind *:80
+	bind *:80
         reqadd X-Forwarded-Proto:\ http
 	default_backend web-backend
 frontend www-https
-bind *:443 ssl crt /etc/haproxy/ssl/www.wrqm.tech.pem
-reqadd X-Forwarded-Proto:\ https
-default_backend web-backend
+	 bind *:443 ssl crt /etc/haproxy/ssl/www.wrqm.tech.pem
+	 reqadd X-Forwarded-Proto:\ https
+	 default_backend web-backend
