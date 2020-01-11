@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 # This script says which server is working
+sudo service nginx stop
 sudo apt-get -y update && sudo apt-get -y install nginx
-ufw allow 'Nginx HTTP'
-echo "Holberton School" | sudo tee /var/www/html/index.html
+echo "Holberton School" | sudo tee /var/www/html/index.html > dev/null
 sudo sed -ie "s/^server {$/server {\n\trewrite ^\/redirect_me https:\/\/www.youtube.com\/watch?v=wupToqz1e2g permanent;/g" /etc/nginx/sites-available/default
-echo "Ceci n'est pas une page" | sudo tee /var/www/html/my_404.html
+echo "Ceci n'est pas une page" | sudo tee /var/www/html/my_404.html > /dev/null
 sudo sed -ie "s/^server {$/server {\n\terror_page 404 \/my_404.html;\n\tlocation = \/my_404.html {\n\t\troot \/var\/www\/html;\n\t\tinternal;\n\t}/g" /etc/nginx/sites-available/default
 sudo sed -ie "s/^server {$/server {\n\tadd_header X-Served-By \$hostname;/g" /etc/nginx/sites-available/default
 sudo service nginx restart
