@@ -4,5 +4,5 @@ sudo service nginx stop
 sudo apt -y update && sudo apt-get -y install nginx
 # echo "Holberton School" > /var/www/html/index.html
 echo "Holberton School" | sudo tee /var/www/html/index.html > /dev/null
-sudo sed -i "0,/^server {/s/^server {/server {\n\trewrite ^\/redirect_me https:\/\/www.youtube.com\/watch?v=wupToqz1e2g permanent;/" /etc/nginx/sites-available/default
+sudo sed -i "0,/^server {/s/^server {/server {\n\trewrite ^\/redirect_me https:\/\/www.youtube.com\/watch?v=wupToqz1e2g permanent;\n/" /etc/nginx/sites-available/default
 sudo service nginx start
