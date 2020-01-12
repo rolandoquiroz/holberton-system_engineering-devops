@@ -4,4 +4,4 @@ sudo service nginx stop
 sudo apt -y update && sudo apt-get -y install nginx
 # echo "Holberton School" > /var/www/html/index.html
 echo "Holberton School" | sudo tee /var/www/html/index.html > /dev/null
-sudo service nginx restart
+sudo service nginx start
