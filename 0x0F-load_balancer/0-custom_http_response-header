@@ -7,5 +7,5 @@ echo "Holberton School" | sudo tee /var/www/html/index.html > /dev/null
 sudo sed -i "0,/^server {/s/^server {/server {\n\trewrite ^\/redirect_me https:\/\/www.youtube.com\/watch?v=wupToqz1e2g permanent;\n/" /etc/nginx/sites-available/default
 echo "Ceci n'est pas une page" | sudo tee /var/www/html/my_404.html > /dev/null
 sudo sed -i "0,/^server {/s/^server {/server {\n\terror_page 404 \/my_404.html;\n\tlocation = \/my_404.html {\n\t\troot \/var\/www\/html;\n\t\tinternal;\n\t}\n/" /etc/nginx/sites-available/default
-sed -i "0,/^server {/s/^server {/server {\n\tadd_header X-Served-By \$hostname;\n/" /etc/nginx/sites-available/default 
+sudo sed -i "0,/^server {/s/^server {/server {\n\tadd_header X-Served-By \$hostname;\n/" /etc/nginx/sites-available/default 
 sudo service nginx start
