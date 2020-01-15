@@ -8,7 +8,6 @@ then
 fi
 i=0
 while [ $i -lt "${#subDomain[@]}" ]
-# for i in "${subDomain[@]}"
 do
     echo -n "The subdomain ${subDomain[$i]}"
     dig "${subDomain[$i]}.$domain" | awk '/ANSWER SECTION:/{getline; print " is a " $4 " record and points to " $5}'
