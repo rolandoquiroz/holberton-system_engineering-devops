@@ -1,2 +1,16 @@
 #!/usr/bin/env bash
-#your domain zone so that the subdomain www points to your load-balancer IP
+# Configure your domain zone so that the subdomain www points to your load-balancer IP (lb-01).
+domain="$1"
+subDomain=("www" "lb-01" "web-01" "web-02")
+if [ "$#" -eq 2 ]
+then
+    subDomain=("$2")
+fi
+i=0
+while [ $i -lt "${#subDomain[@]}" ]
+# for i in "${subDomain[@]}"
+do
+    echo -n "The subdomain ${subDomain[$i]}"
+    dig "${subDomain[$i]}.$domain" | awk '/ANSWER SECTION:/{getline; print " is a " $4 " record and points to " $5}'
+    i=$(( ++i ))
+done
