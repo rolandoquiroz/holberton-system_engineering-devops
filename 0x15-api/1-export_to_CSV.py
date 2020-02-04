@@ -21,7 +21,7 @@ if __name__ == "__main__":
     response_user = requests.get(url_user)
     user_dict = response_user.json()
 
-    url_todo = ("https://jsonplaceholder.typicode.com/todos?userID={}".
+    url_todo = ("https://jsonplaceholder.typicode.com/todos?userId={}".
                 format(employee_ID))
     response_todo = requests.get(url_todo)
     todo_dict = response_todo.json()
