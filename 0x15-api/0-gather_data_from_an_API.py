@@ -9,8 +9,8 @@ if __name__ == '__main__':
     '''
     This won't be run when imported """
     '''
-    import requests
     from sys import argv
+    import requests
 
     employee_ID = argv[1]
 
