@@ -10,9 +10,9 @@ if __name__ == '__main__':
     This won't be run when imported """
     '''
     import requests
-    from sys import argv
+    import sys
 
-    employee_ID = argv[1]
+    employee_ID = sys.argv[1]
 
     url_user = ("https://jsonplaceholder.typicode.com/users/{}".
                 format(employee_ID))
