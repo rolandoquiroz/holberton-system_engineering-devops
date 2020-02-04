@@ -22,23 +22,20 @@ if __name__ == '__main__':
                 format(employee_ID))
     response_todo = requests.get(url_todo)
 
-    try:
-        user_dict = response_user.json()
-        todo_dict = response_todo.json()
-        tasks_done = []
+    user_dict = response_user.json()
+    todo_dict = response_todo.json()
+    tasks_done = []
 
-        for task in todo_dict:
-            if task.get('completed'):
-                tasks_done.append(task.get('title'))
+    for task in todo_dict:
+        if task.get('completed'):
+            tasks_done.append(task.get('title'))
 
-        total_tasks = len(todo_dict)
+    total_tasks = len(todo_dict)
 
-        name = user_dict.get('name')
+    name = user_dict.get('name')
 
-        print("Employee {} is done with tasks({}/{}):".
-              format(name, len(tasks_done), total_tasks))
+    print("Employee {} is done with tasks({}/{}):".
+          format(name, len(tasks_done), total_tasks))
 
-        for task in tasks_done:
-            print("\t {}".format(task))
-    except:
-        pass
+    for task in tasks_done:
+        print("\t {}".format(task))
