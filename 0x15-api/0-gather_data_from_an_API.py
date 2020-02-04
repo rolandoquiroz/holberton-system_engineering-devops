@@ -7,7 +7,7 @@ returns information about his/her TODO list progress.
 
 if __name__ == '__main__':
     '''
-    This won't be run when imported """
+    This won't be run when imported
     '''
     from sys import argv
     import requests
