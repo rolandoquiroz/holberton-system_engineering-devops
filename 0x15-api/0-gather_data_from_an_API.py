@@ -5,13 +5,13 @@ returns information about his/her TODO list progress.
 '''
 
 
-if __name__ == '__main__':
+import requests
+import sys
+
+if __name__ == "__main__":
     '''
     This won't be run when imported """
     '''
-    import requests
-    import sys
-
     employee_ID = sys.argv[1]
 
     url_user = ("https://jsonplaceholder.typicode.com/users/{}".
