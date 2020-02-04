@@ -26,7 +26,7 @@ if __name__ == "__main__":
     response_todo = requests.get(url_todo)
     todo_dict = response_todo.json()
 
-    with open("{}.csv".format(employee_ID), 'a+') as csvf:
+    with open("{}.csv".format(employee_ID), 'w') as csvf:
         f = csv.writer(csvf, delimiter=',', quoting=csv.QUOTE_ALL)
         for task in todo_dict:
             f.writerow([employee_ID, user_dict.get('username'),
