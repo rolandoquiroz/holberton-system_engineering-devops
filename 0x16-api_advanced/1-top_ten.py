@@ -11,7 +11,7 @@ def top_ten(subreddit):
     This method queries the Reddit API and prints the titles
     of the first 10 hot posts listed for a given subreddit.
     """
-    url = "https://api.reddit.com/r/{}/?limit=10".format(subreddit)
+    url = "https://api.reddit.com/r/{}/?hot&limit=10".format(subreddit)
     response = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'})
     if response.status_code is 200:
         response_json = response.json()
