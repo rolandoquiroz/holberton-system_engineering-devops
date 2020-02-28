@@ -1,11 +1,10 @@
 # 0. Sky is the limit, let's bring that limit higher
 
 exec { 'fix wp-settings.php file':
-  command => "sed -i 's|15|4096|g' /etc/default/nginx",
-  path    => ['/usr/bin/env']
+  command => "/bin/echo ULIMIT='-n 32768' | sudo tee /etc/default/nginx",
 }
 
-exec { 'nginx restart':
+exec { 'restart nginx':
   command => 'service nginx restart',
-  path    => ['/usr/bin/env']
+  path    => ['/usr/bin']
 }
