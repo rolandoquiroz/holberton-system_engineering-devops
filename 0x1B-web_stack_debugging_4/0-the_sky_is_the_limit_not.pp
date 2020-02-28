@@ -5,6 +5,5 @@ exec { 'fix wp-settings.php file':
 }
 
 exec { 'restart nginx':
-  command => 'service nginx restart',
-  path    => ['/usr/bin']
+  command => '/usr/bin/service nginx restart',
 }
