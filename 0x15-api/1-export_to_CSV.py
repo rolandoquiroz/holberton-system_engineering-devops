@@ -29,5 +29,7 @@ if __name__ == "__main__":
     with open("{}.csv".format(employee_ID), 'a+') as csvf:
         f = csv.writer(csvf, delimiter=',', quoting=csv.QUOTE_ALL)
         for task in todo_dict:
-            f.writerow([employee_ID, user_dict['username'],
-                        task.get('completed'), task['title']])
+            f.writerow([employee_ID,
+                       user_dict['username'],
+                       task['completed'],
+                       task['title']])
