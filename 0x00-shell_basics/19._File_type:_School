@@ -1,0 +1,3 @@
+file -C -m holberton
+file --mime-type -m holberton.mgc *
+file -m school.mgc *
